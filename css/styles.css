@@ -1,5 +1,6 @@
 body{
-    background-image: url('../img/BTTFII.webp');
+    background-image: linear-gradient(to left, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7)), url('../img/BTTFII.webp');
+    background-color: rgba(51, 51, 51, 0.51);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -7,4 +8,53 @@ body{
     height: 100vh;
     padding: 0;
     margin: 0;
+
 }
+
+h1{
+    color:lawngreen;
+}
+p{
+    color: lawngreen;
+}
+h2{
+    color: lawngreen;
+}
+
+#analogue {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 0;
+
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background: black;
+}
+.hour {
+    width: 6px;
+    height: 70px;
+    background: #333;
+    z-index: 2;
+}
+.minute {
+    width: 4px;
+    height: 110px;
+    background: #555;
+    z-index: 3;
+}
+.second {
+    width: 2px;
+    height: 130px;
+    background: red;
+    z-index: 4;
+}
+
+
+
