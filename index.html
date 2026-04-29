@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Back to the Future</title>
+    <title>God dammit Morty!</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
+<h2>Morty: "Guess you guys aren't ready for that yet... <br>But your kids are gonna love it."</h2>
+
+<div id ="analogue"></div>
+<div id = "digital" class="digital"></div>
+
+<!-- storage btn-->
+<p>To save Ricks life press the button</p>
+<button id = "btn">Don't press the button!</button>
+
+<div id = "explanation">
+    <div id = "donald">
+        <h2>Explanation</h2>
+        <iframe class="video" width="450" height="250" src="https://www.youtube.com/embed/vvY6LuGrIWI" title="YouTube" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script type = "module" src="./js/model.time.js"></script>
+<script type = "module" src="./js/controller.js"></script>
+<script type = "module" src="./js/view.analogue.js"></script>
+<script type = "module" src="./js/view.digital.js"></script>
 </body>
 </html>

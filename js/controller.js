@@ -31,7 +31,49 @@
  *     Now hurry Marty! Or I will be stuck in the past forever!
  *
  *     Doc Brown - 1955-11-05
+ *     Laila Tribere - 30.04.2026
  *******************************************************/
 
 // HINT:
 // setInterval(functionName, 1000); will call functionName() every 1000 miliseconds.
+
+import {clockModel} from "./model.time.js";
+import {analogView} from "./view.analogue.js";
+import {digitalView} from "./view.digital.js";
+
+let timeController ={
+    tick : function() {
+        let data = clockModel.getTime();
+        analogView.update(data);
+        digitalView.update(data);
+    },
+
+    init : function(){
+        setInterval(function(){
+            timeController.tick();
+        },1000);
+
+        let saveBtn = document.getElementById("btn");
+        if (saveBtn){
+            saveBtn.addEventListener("click", function(){
+                localStorage.setItem("Ricks_time", clockModel.getTime().DIGITAL_TIME);
+                alert("I said don't press the button but thanks, we are back!");
+            });
+        }
+    }
+};
+timeController.init();
+
+//from class
+/*
+import {timeModel} from "./model.time.js"; // and all other js
+import {timeModel} from "/.model.time.js";
+let timeController= {
+    init : function () {
+        setInterval (function(){
+            timeModel.updateTime();
+        },1000)
+    }
+}
+timeController.init()
+ */
